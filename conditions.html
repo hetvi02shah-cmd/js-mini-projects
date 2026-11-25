@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional operators</title>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+
+    <script>
+        let hours_worked = parseInt(prompt("Please enter the number of hours you work in a day: "))
+        let rate_per_hour = parseInt(prompt("Please enter the amount you earn per hour: "))
+        let total_salary = hours_worked * rate_per_hour
+        document.write(total_salary)
+        if (hours_worked >= 8) {
+            document.write("Give a bonus of $10 per hour. ");
+        } else 
+        { 
+            document.write("No bonus")
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse events</title>
+  </head>
+  <body>
+    <h1>Mouseover and Mouseout</h1>
+    <p></p>
+
+    <div
+      id="box"
+      style="width: 600px; height: 400px; padding: 20px; border: 1px solid #000"
+    >
+      <img src="Example.jpeg" alt="example" width="500px; height300px" />
+       <p id="description" style="display: none;">"A joyful woman with curly brown hair holding a straw hat outdoors in a park."</p>
+    </div>
+
+   
+
+    <script>
+      const box = document.getElementById("box");
+      const description = document.getElementById("description");
+
+      box.addEventListener("mouseover", function () {
+        description.style.display = "block";
+      });
+
+      box.addEventListener("mouseout", function () {
+        description.style.display = "none";
+      });
+    </script>
+
+    <!--  <script>
+        const box = document.getElementById("box")
+
+        //Let box listen for mouseover
+        box.addEventListener("mouseover", function() {
+            box.innerHTML="This image is an example"
+        });
+
+        //Let the box listen for mouseout
+        box.addEventListener("mouseout", function() {
+            box.innerHTML="img"
+        });
+
+    </script>>
+    -->
+  </body>
+</html>

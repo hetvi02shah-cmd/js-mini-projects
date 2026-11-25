@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculate the math</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="addForm">
+    <div class="form-group">
+      <label for="num1">First Number:</label>
+      <input type="number" id="num1" step="any" required>
+    </div>
+
+    <div class="form-group">
+      <label for="num2">Second Number:</label>
+      <input type="number" id="num2" step="any" required>
+    </div>
+
+    <div class="form-group">
+        <label for="num3">Third Number:</label>
+        <input type="number" id="num3" step="any">
+    </div>
+
+    <button type="submit">Calculate</button>
+  </form>
+
+  <div id="result"></div>
+  <div id="result2"></div>
+
+  <script>
+    document.getElementById('addForm').addEventListener('submit', function(event) {
+      // Prevent the form from refreshing the page
+      event.preventDefault();
+
+      // Get input values and convert them from strings to floating-point numbers
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const num3 = parseFloat(document.getElementById('num3').value);
+
+      // Calculate the sum
+      const sum = Math.floor(num1 / num2) * num3;
+      const div =(num1 / num2);
+
+      // Display the result
+      document.getElementById('result').textContent = `The result of the sum is: ${sum}`;
+       document.getElementById('result2').textContent = `The result of the div is: ${div}`;
+    });
+  </script>
+
+</body>
+</html>

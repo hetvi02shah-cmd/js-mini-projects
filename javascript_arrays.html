@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>The length property</h1>
+    <p>Length of the array; </p>
+    <p id="length"></p>
+    <script>
+    // Create and display an array:
+    const cities = ["Tokyo", "New York","London","Paris","Nairobi","Sydney","Toronto","Berlin","Singapore","Dubai","São Paulo","Mumbai","Seoul","Cairo", "Mexico City","Istanbul"];
+    let size = cities.length;
+    document.getElementById("length").innerHTML = size + " cities";
+
+    // First sort the array
+    cities.sort()
+    document.write(cities)
+    document.write("<br>")
+
+    // Reverse the array
+    cities.reverse()
+    document.write(cities)
+    </script>
+    <br>
+    <br>
+
+    <p>The pop element</p>
+    <script>
+        // pop() removes the last element of an array.
+        const cities2 = ["Tokyo", "New York","London","Paris","Nairobi","Sydney","Toronto","Berlin","Singapore","Dubai","São Paulo","Mumbai","Seoul","Cairo", "Mexico City","Istanbul"];
+        cities2.pop();
+        document.write(cities2)
+    </script>
+
+    <p>Push, Shift, Unshift, Join</p>
+    <p id="join"></p>
+    <script>
+        // push() adds a new element to the array.
+        const fruits = ["kiwi", "apple", "orange", "cherry", "strawberry"]
+        fruits.push("lychee")
+        document.write(fruits)
+        document.write("<br>")
+
+        // shift() removes the first element of an array.
+        fruits.shift()
+        document.write(fruits)
+        document.write("<br>")
+
+        // unshift() adds new element to the beginning of the array.
+        fruits.unshift("watermelon")
+        document.write(fruits)
+        document.write("<br>")
+
+        // join() joins array elements into a string.
+        document.getElementById("join").innerHTML = fruits.join(" : ")
+    </script>
+
+<br>
+<br>
+<p>Concatenate, Delete</p>
+<script>
+    const animals = ["elephant", "lion", "tiger"];
+    const country = ["Kenya", "South Africa", "India"];
+    const tourism = animals.concat(country)
+    document.write(tourism)
+    document.write("<br>")
+    document.write(animals + country)
+    document.write("<br>")
+
+    // delete; removes an element from the array.
+    delete animals[2]
+    document.write(animals)
+    document.write("<br>")
+
+</script>
+
+    
+<br>
+<br>
+<p>Slicing</p>
+<script>
+    const world = ["India", "China", "Japan", "Kenya", "Nigeria", "Ethiopia", "Tanzania"];
+    const Africa = world.slice(3)
+    document.write(Africa)
+    
+</script>
+</body>
+</html>

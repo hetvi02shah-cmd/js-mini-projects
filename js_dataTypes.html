@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript data types</title>
+</head>
+<body>
+    <h1></h1>
+    <p id="bool"></p>
+    <p id="undefined"></p>
+
+    <script>
+        // Number
+        let x = 89
+        let y = 7.3
+        let Area = x * y
+        document.write(Area)
+
+        // string
+        let name = "shah"
+        let position = 5
+        document.write("<br>")
+        document.write(name + " became position " + position)
+        document.write("<br>")
+
+        // Boolean
+        let a = 5
+        document.getElementById("bool").innerHTML = (a == 6)
+
+        // Undefined
+        let car;
+        document.getElementById("undefined").innerHTML = car;
+
+        // Null
+        let b = null
+        let type = typeof y;
+        document.write("The type is " + type)
+        document.write("<br>")
+
+        // Symbol
+        let apple = Symbol();
+        let banana = Symbol();
+        let result = (apple === banana)
+        document.write("The result is " + result)
+        document.write("<br>")
+
+        // Object
+        document.write(typeof "" + "<br>" )
+        document.write(typeof 4 + "<br>")
+        document.write(typeof false + "<br>" + "<br>")
+
+        // Date object
+        const d = new Date()
+        document.write(d)
+
+    </script>
+    
+</body>
+</html>

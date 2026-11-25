@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional operators</title>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+
+<script>
+    const hoursWorked = parseFloat(prompt("Please enter the number of hours you work in a day: "));
+    const ratePerHour = parseFloat(prompt("Please enter the amount you earn per hour: "));
+    const totalSalary = hoursWorked * ratePerHour;
+
+    document.write(`Total Salary: $${totalSalary.toFixed(2)}<br>`);
+
+    if (hoursWorked >= 8) {
+        const bonus = 10 * hoursWorked;
+        document.write(`Bonus: $${bonus.toFixed(2)}<br>`);
+    } else {
+        document.write("No bonus<br>");
+    }
+</script>
+
+</body>
+</html>
